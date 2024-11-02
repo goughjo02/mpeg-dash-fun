@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Notes
+
+I ran this to generate mpeg-dash assets:
+
+```
+ffmpeg -i input.mp4 -map 0 -map 0 -map 0 -b:v:0 300k -b:v:1 600k -b:v:2 1200k -s:v:0 640x360 -s:v:1 854x480 -s:v:2 1280x720 -c:v libx264 -c:a aac -f dash output.mpd
+```

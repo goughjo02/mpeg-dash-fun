@@ -34,3 +34,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+public/drone_footage_riverstown_january_2021.mp4
